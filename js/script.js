@@ -24,3 +24,23 @@ document.getElementById('toggle-more').addEventListener('click', function () {
         btn.textContent = 'Show more';
     }
 });
+
+// Load external section content marked with data-src
+document.addEventListener('DOMContentLoaded', function () {
+    const loaders = document.querySelectorAll('[data-src]');
+    loaders.forEach(async (el) => {
+        const src = el.getAttribute('data-src');
+        if (!src) return;
+        try {
+            const res = await fetch(src);
+            if (!res.ok) throw new Error('Failed to load ' + src);
+            const html = await res.text();
+            el.innerHTML = html;
+            el.removeAttribute('aria-busy');
+        } catch (err) {
+            el.innerHTML = '<p>Unable to load content.</p>';
+            el.removeAttribute('aria-busy');
+            console.error(err);
+        }
+    });
+});
