@@ -1,18 +1,19 @@
-<html lang="en">
+﻿<html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Document</title>
+        <link rel="stylesheet" href="css/styles.css">
     </head>
     <body>
-        <h1 style="color: blue;">Welcome to My website</h1>
+        <h1>Welcome to My website</h1>
         <p>Hello World!</p>
 
-        <section id="vscode-tips" style="max-width:800px;margin:32px auto;padding:16px;border-radius:8px;background:#f6f9ff;box-shadow:0 6px 18px rgba(55,60,90,0.08);">
-            <h2 style="color:#007acc;margin-bottom:8px;">Cool stuff about programming in VS Code</h2>
+        <section id="vscode-tips">
+            <h2>Cool stuff about programming in VS Code</h2>
             <p>VS Code is packed with features that make coding faster and more enjoyable. Here are a few tips and tricks:</p>
 
-            <ul id="tips-list" style="line-height:1.6">
+            <ul id="tips-list">
                 <li><strong>Command Palette:</strong> Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to access commands quickly.</li>
                 <li><strong>Extensions:</strong> Add language support, linters, and themes from the Extensions view.</li>
                 <li><strong>Integrated Terminal:</strong> Use the built-in terminal to run commands without switching windows.</li>
@@ -20,14 +21,14 @@
                 <li><strong>Live Share:</strong> Collaborate in real-time with teammates.</li>
             </ul>
 
-            <div style="display:flex;gap:8px;margin-top:12px;align-items:center;">
-                <button id="copy-tips" style="background:#007acc;color:white;border:none;padding:8px 12px;border-radius:4px;cursor:pointer">Copy Tips</button>
-                <button id="toggle-more" style="background:#e6f0ff;color:#007acc;border:1px solid #cfe3ff;padding:8px 12px;border-radius:4px;cursor:pointer">Show more</button>
-                <span id="copy-feedback" aria-live="polite" style="margin-left:8px;color:#2b7a4b"></span>
+            <div class="button-row">
+                <button id="copy-tips">Copy Tips</button>
+                <button id="toggle-more">Show more</button>
+                <span id="copy-feedback" aria-live="polite"></span>
             </div>
 
-            <div id="more-content" style="display:none;margin-top:12px;padding:12px;border-left:3px solid #cfe3ff;background:#ffffff;border-radius:4px;">
-                <h3 style="margin-top:0;color:#005a9e">More VS Code Goodies</h3>
+            <div id="more-content">
+                <h3>More VS Code Goodies</h3>
                 <ol>
                     <li><strong>Settings Sync:</strong> Sync settings across machines using your account.</li>
                     <li><strong>Debugging:</strong> Set breakpoints and step through code right from the editor.</li>
@@ -37,81 +38,34 @@
             </div>
         </section>
 
-        <section id="vscode-images" style="max-width:900px;margin:32px auto;padding:16px;border-radius:8px;background:#ffffff;box-shadow:0 6px 18px rgba(55,60,90,0.07);">
-            <h2 style="color:#007acc;margin-bottom:8px;">VS Code Visual Highlights</h2>
+        <section id="vscode-images">
+            <h2>VS Code Visual Highlights</h2>
             <p>These images show common VS Code workflows and why the editor is great for modern web development.</p>
 
-            <div style="display:grid;gap:20px;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));margin-top:20px;">
-                <figure style="background:#f8fbff;border:1px solid #e5ecf7;padding:16px;border-radius:12px;">
-                    <svg viewBox="0 0 120 80" style="width:100%;height:140px;display:block;border-radius:8px;background:#eef6ff;">
-                        <rect x="10" y="10" width="100" height="60" rx="8" ry="8" fill="#e7f2ff" stroke="#b2d4fb" stroke-width="2" />
-                        <rect x="18" y="18" width="20" height="8" rx="2" fill="#007acc" />
-                        <rect x="18" y="32" width="70" height="6" rx="3" fill="#8fbfff" />
-                        <rect x="18" y="44" width="85" height="6" rx="3" fill="#bfdcff" />
-                        <rect x="18" y="56" width="60" height="6" rx="3" fill="#d9eafe" />
-                    </svg>
-                    <figcaption style="margin-top:12px;font-size:0.95rem;line-height:1.5;color:#333;">
+            <div class="image-grid">
+                <figure>
+                    <img src="assets/editor-workspace.svg" alt="Editor workspace illustration" />
+                    <figcaption>
                         <strong>Editor workspace:</strong> A clean code editor layout with file tabs, status bar, and code lines. VS Code lets you focus on code and split panes efficiently.
                     </figcaption>
                 </figure>
 
-                <figure style="background:#f8fbff;border:1px solid #e5ecf7;padding:16px;border-radius:12px;">
-                    <svg viewBox="0 0 120 80" style="width:100%;height:140px;display:block;border-radius:8px;background:#eef6ff;">
-                        <rect x="10" y="10" width="100" height="60" rx="8" ry="8" fill="#e7f2ff" stroke="#b2d4fb" stroke-width="2" />
-                        <circle cx="28" cy="28" r="4" fill="#f7c948" />
-                        <circle cx="38" cy="28" r="4" fill="#f25f5c" />
-                        <circle cx="48" cy="28" r="4" fill="#6acb76" />
-                        <rect x="18" y="36" width="84" height="8" rx="4" fill="#8fbfff" />
-                        <rect x="18" y="50" width="60" height="8" rx="4" fill="#b8d8ff" />
-                    </svg>
-                    <figcaption style="margin-top:12px;font-size:0.95rem;line-height:1.5;color:#333;">
+                <figure>
+                    <img src="assets/terminal-output.svg" alt="Terminal output illustration" />
+                    <figcaption>
                         <strong>Terminal and output:</strong> Integrated terminal support keeps commands, build output, and Git actions in one place so you never leave the editor.
                     </figcaption>
                 </figure>
 
-                <figure style="background:#f8fbff;border:1px solid #e5ecf7;padding:16px;border-radius:12px;">
-                    <svg viewBox="0 0 120 80" style="width:100%;height:140px;display:block;border-radius:8px;background:#eef6ff;">
-                        <rect x="10" y="10" width="100" height="60" rx="8" ry="8" fill="#e7f2ff" stroke="#b2d4fb" stroke-width="2" />
-                        <rect x="20" y="20" width="40" height="8" rx="3" fill="#007acc" />
-                        <rect x="20" y="34" width="80" height="8" rx="3" fill="#bfdcff" />
-                        <rect x="20" y="48" width="60" height="8" rx="3" fill="#d9eafe" />
-                        <rect x="20" y="62" width="70" height="8" rx="3" fill="#c1e0ff" />
-                        <rect x="70" y="22" width="20" height="38" rx="4" fill="#5ba8ff" />
-                    </svg>
-                    <figcaption style="margin-top:12px;font-size:0.95rem;line-height:1.5;color:#333;">
+                <figure>
+                    <img src="assets/debug-extensions.svg" alt="Debug and extensions illustration" />
+                    <figcaption>
                         <strong>Debug and extensions:</strong> Visual debugging, inline error hints, and extension icons help make coding faster and more powerful.
                     </figcaption>
                 </figure>
             </div>
         </section>
 
-        <script>
-            document.getElementById('copy-tips').addEventListener('click', async function () {
-                const tips = Array.from(document.querySelectorAll('#tips-list li'))
-                    .map(li => li.textContent.trim())
-                    .join('\n');
-
-                try {
-                    await navigator.clipboard.writeText('VS Code Tips:\n' + tips);
-                    const fb = document.getElementById('copy-feedback');
-                    fb.textContent = 'Copied!';
-                    setTimeout(() => fb.textContent = '', 2000);
-                } catch (err) {
-                    alert('Unable to copy to clipboard');
-                }
-            });
-
-            document.getElementById('toggle-more').addEventListener('click', function () {
-                const more = document.getElementById('more-content');
-                const btn = document.getElementById('toggle-more');
-                if (more.style.display === 'none') {
-                    more.style.display = 'block';
-                    btn.textContent = 'Show less';
-                } else {
-                    more.style.display = 'none';
-                    btn.textContent = 'Show more';
-                }
-            });
-        </script>
+        <script src="js/script.js"></script>
     </body>
 </html>

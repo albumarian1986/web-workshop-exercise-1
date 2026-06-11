@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #eef3fb;
+    margin: 0;
+    padding: 24px;
+    color: #1f2937;
+}
+
+h1 {
+    color: #0b4a8b;
+}
+
+section {
+    max-width: 900px;
+    margin: 32px auto;
+    padding: 18px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 0 6px 18px rgba(55, 60, 90, 0.07);
+}
+
+#vscode-tips {
+    background: #f6f9ff;
+    box-shadow: 0 6px 18px rgba(55, 60, 90, 0.08);
+}
+
+#vscode-tips h2,
+#vscode-images h2 {
+    color: #007acc;
+    margin-bottom: 8px;
+}
+
+#vscode-tips p,
+#vscode-images p,
+figcaption {
+    line-height: 1.65;
+}
+
+#tips-list {
+    line-height: 1.75;
+    padding-left: 16px;
+}
+
+#tips-list li {
+    margin-bottom: 10px;
+}
+
+button {
+    border: none;
+    border-radius: 6px;
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    cursor: pointer;
+}
+
+#copy-tips {
+    background: #007acc;
+    color: white;
+}
+
+#toggle-more {
+    background: #e6f0ff;
+    color: #007acc;
+    border: 1px solid #cfe3ff;
+}
+
+#copy-feedback {
+    margin-left: 8px;
+    color: #2b7a4b;
+}
+
+#more-content {
+    display: none;
+    margin-top: 12px;
+    padding: 12px;
+    border-left: 3px solid #cfe3ff;
+    background: #ffffff;
+    border-radius: 4px;
+}
+
+#vscode-images .image-grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    margin-top: 20px;
+}
+
+figure {
+    background: #f8fbff;
+    border: 1px solid #e5ecf7;
+    padding: 16px;
+    border-radius: 12px;
+}
+
+svg {
+    width: 100%;
+    height: 140px;
+    display: block;
+    border-radius: 8px;
+    background: #eef6ff;
+}
+
+figcaption {
+    margin-top: 12px;
+    font-size: 0.95rem;
+    color: #333;
+}
