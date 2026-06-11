@@ -105,3 +105,16 @@ figcaption {
     font-size: 0.95rem;
     color: #333;
 }
+
+/* Code blocks */
+pre { 
+    background: #0b1220;
+    color: #e6eef6;
+    padding: 12px;
+    border-radius: 8px;
+    overflow:auto;
+}
+pre code { 
+    font-family: Menlo, Monaco, 'Courier New', monospace;
+    font-size: 0.95rem;
+}
