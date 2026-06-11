@@ -7,5 +7,63 @@
     <body>
         <h1 style="color: blue;">Welcome to My website</h1>
         <p>Hello World!</p>
+
+        <section id="vscode-tips" style="max-width:800px;margin:32px auto;padding:16px;border-radius:8px;background:#f6f9ff;box-shadow:0 6px 18px rgba(55,60,90,0.08);">
+            <h2 style="color:#007acc;margin-bottom:8px;">Cool stuff about programming in VS Code</h2>
+            <p>VS Code is packed with features that make coding faster and more enjoyable. Here are a few tips and tricks:</p>
+
+            <ul id="tips-list" style="line-height:1.6">
+                <li><strong>Command Palette:</strong> Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd> to access commands quickly.</li>
+                <li><strong>Extensions:</strong> Add language support, linters, and themes from the Extensions view.</li>
+                <li><strong>Integrated Terminal:</strong> Use the built-in terminal to run commands without switching windows.</li>
+                <li><strong>Multi-cursor Editing:</strong> Hold <kbd>Alt</kbd> (Windows) and click to place multiple cursors.</li>
+                <li><strong>Live Share:</strong> Collaborate in real-time with teammates.</li>
+            </ul>
+
+            <div style="display:flex;gap:8px;margin-top:12px;align-items:center;">
+                <button id="copy-tips" style="background:#007acc;color:white;border:none;padding:8px 12px;border-radius:4px;cursor:pointer">Copy Tips</button>
+                <button id="toggle-more" style="background:#e6f0ff;color:#007acc;border:1px solid #cfe3ff;padding:8px 12px;border-radius:4px;cursor:pointer">Show more</button>
+                <span id="copy-feedback" aria-live="polite" style="margin-left:8px;color:#2b7a4b"></span>
+            </div>
+
+            <div id="more-content" style="display:none;margin-top:12px;padding:12px;border-left:3px solid #cfe3ff;background:#ffffff;border-radius:4px;">
+                <h3 style="margin-top:0;color:#005a9e">More VS Code Goodies</h3>
+                <ol>
+                    <li><strong>Settings Sync:</strong> Sync settings across machines using your account.</li>
+                    <li><strong>Debugging:</strong> Set breakpoints and step through code right from the editor.</li>
+                    <li><strong>Snippets:</strong> Create custom snippets to insert common code patterns.</li>
+                    <li><strong>Emmet:</strong> Quickly write HTML/CSS with Emmet abbreviations.</li>
+                </ol>
+            </div>
+        </section>
+
+        <script>
+            document.getElementById('copy-tips').addEventListener('click', async function () {
+                const tips = Array.from(document.querySelectorAll('#tips-list li'))
+                    .map(li => li.textContent.trim())
+                    .join('\n');
+
+                try {
+                    await navigator.clipboard.writeText('VS Code Tips:\n' + tips);
+                    const fb = document.getElementById('copy-feedback');
+                    fb.textContent = 'Copied!';
+                    setTimeout(() => fb.textContent = '', 2000);
+                } catch (err) {
+                    alert('Unable to copy to clipboard');
+                }
+            });
+
+            document.getElementById('toggle-more').addEventListener('click', function () {
+                const more = document.getElementById('more-content');
+                const btn = document.getElementById('toggle-more');
+                if (more.style.display === 'none') {
+                    more.style.display = 'block';
+                    btn.textContent = 'Show less';
+                } else {
+                    more.style.display = 'none';
+                    btn.textContent = 'Show more';
+                }
+            });
+        </script>
     </body>
 </html>
